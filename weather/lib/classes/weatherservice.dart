@@ -1,4 +1,3 @@
-import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:weather/classes/weathermodel.dart';
@@ -12,8 +11,8 @@ class WeatherService {
         Uri.parse('$baseurl/forecast.json?key=$apikey&q=$cityname&days=1');
 
     http.Response response = await http.get(url);
-    Map<String, dynamic> data = jsonDecode(response.body);
-    WeatherModel weather = WeatherModel.fromjson(data);
-    return weather;
+    //Map<String, dynamic> data = jsonDecode(response.body);
+    WeatherModel weathermodel = WeatherModel.fromjson(response.body);
+    return weathermodel;
   }
 }

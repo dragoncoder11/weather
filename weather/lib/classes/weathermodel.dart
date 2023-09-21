@@ -1,11 +1,11 @@
 class WeatherModel {
-  String cityname;
-  String date;
-  String imageurl;
-  String weatherstatename;
-  double avgtemp;
-  double mintemp;
-  double maxtemp;
+  final String cityname;
+ final String date;
+ final String imageurl;
+ final String weatherstatename;
+ final double avgtemp;
+ final double mintemp;
+ final double maxtemp;
   WeatherModel({
     required this.cityname,
     required this.date,
@@ -26,8 +26,5 @@ class WeatherModel {
         mintemp: jsondata['day']['mintemp_c'],
         maxtemp: jsondata['day']['maxtemp_c']);
   }
-  @override
-  String toString() {
-    return 'cityname=$cityname';
-  }
+ 
 }

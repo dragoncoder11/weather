@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:weather/classes/weathermodel.dart';
 import 'package:weather/classes/weatherservice.dart';
@@ -55,10 +57,8 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(18)),
                       child: TextField(
                         onSubmitted: (String city) async {
-                          WeatherService service = WeatherService();
-                          WeatherModel weather =
-                              await service.getweather(cityname: city);
-                          print(weather.cityname);
+                          await WeatherService().getweather(cityname: city);
+                          
                         },
                         cursorColor: Colors.grey[700],
                         decoration: InputDecoration(
