@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'no_weather_page.dart';
 import 'package:flutter/material.dart';
 import 'package:weather/classes/weathermodel.dart';
 import 'package:weather/classes/weatherservice.dart';
@@ -16,7 +15,7 @@ class HomePage extends StatelessWidget {
             width: double.infinity,
             height: 300,
             decoration: BoxDecoration(
-                color: Colors.blueAccent,
+                color: Color.fromARGB(195, 11, 57, 136),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(50),
                   bottomRight: Radius.circular(50),
@@ -78,6 +77,10 @@ class HomePage extends StatelessWidget {
               ],
             ),
           ),
+          
+          Column(children: [
+         NoWeatherPage()
+          ],)
         ],
       ),
     );
