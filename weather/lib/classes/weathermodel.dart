@@ -21,7 +21,7 @@ class WeatherModel {
         cityname: data['location']['name'],
         date: data['location']['localtime'],
         imageurl: data['current']['icon'],
-        weatherstatename: jsondata['condition']['text'],
+        weatherstatename: jsondata['day']['condition']['text'],
         avgtemp: jsondata['day']['avgtemp_c'],
         mintemp: jsondata['day']['mintemp_c'],
         maxtemp: jsondata['day']['maxtemp_c']);
