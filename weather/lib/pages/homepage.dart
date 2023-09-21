@@ -57,8 +57,9 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(18)),
                       child: TextField(
                         onSubmitted: (String city) async {
-                          await WeatherService().getweather(cityname: city);
-                          
+                          WeatherModel weathermodel =
+                              await WeatherService().getweather(cityname: city);
+                          log(weathermodel.avgtemp);
                         },
                         cursorColor: Colors.grey[700],
                         decoration: InputDecoration(

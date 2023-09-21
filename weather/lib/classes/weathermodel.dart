@@ -15,7 +15,7 @@ class WeatherModel {
     required this.mintemp,
     required this.maxtemp,
   });
-  factory WeatherModel.fromjson(dynamic data) {
+  factory WeatherModel.fromJson(dynamic data) {
     var jsondata = data['forecast']['forecastday'][0];
     return WeatherModel(
         cityname: data['location']['name'],
@@ -26,5 +26,6 @@ class WeatherModel {
         mintemp: jsondata['day']['mintemp_c'],
         maxtemp: jsondata['day']['maxtemp_c']);
   }
+
  
 }
